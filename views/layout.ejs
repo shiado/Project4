@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>A Data Driven Map</title>
+    <script type="text/javascript" src="js/fusioncharts.js"></script>
+    <script type="text/javascript" src="js/themes/fusioncharts.theme.fint.js"></script>
+<script>
+FusionCharts.ready(function () {
+    var appMap = new FusionCharts({
+        type: 'maps/worldwithcountries',
+        renderAt: 'chart-container',
+        width: '100%',
+        height: '100%',
+        dataFormat: 'json',
+        dataSource: {
+        "chart": {
+        "caption": "App download by countries",
+        "theme": "fint",
+        "showLabels": "0",
+        "formatNumberScale": "0"
+    },
+            "colorrange": {
+
+              "minvalue": "0",
+             "startlabel": "Low",
+             "endlabel": "High",
+             "code": "#FF4411",
+             "gradient": "1",
+
+                "color": [
+            {
+                "maxvalue": "25",
+                "code": "#FFDD44",
+                "displayValue": "Median"
+            },
+            {
+                "maxvalue": "100",
+                "code": "#6baa01"
+            }
+        ]
+    },
+            "data": [
+                {
+                    "id": "05",
+                    "value": "20",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "23",
+                    "value": "10",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "27",
+                    "value": "40",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "118",
+                    "value": "10",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "175",
+                    "value": "60",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "141",
+                    "value": "32",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "80",
+                    "value": "32",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "104",
+                    "value": "8",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "198",
+                    "value": "11",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                },
+                {
+                    "id": "170",
+                    "value": "66",
+                    "showLabel": "1",
+                    "Long Name": "1"
+                }
+            ]
+        }
+    }).render();
+});
+
+</script>
+</head>
+<body>
+<div id="chart-container">App download by countries</div>
+</body>
+</html>
