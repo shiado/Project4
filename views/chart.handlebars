@@ -1,0 +1,38 @@
+<br>
+<h2 id = subheader>Android Download(%) - Free Apps </h2>
+
+
+<select id= "mapselector">
+  {{#each categories}}
+    <option value="{{code}}">{{name}}</option>
+  {{/each}}
+</select>
+
+<div id="chart-location">
+</div>
+
+<div class="appcontainer">
+
+<h2 id = subheader>Apps by Country </h2>
+
+<select id= "chartselector">
+
+  {{#each countries}}
+    <option value="{{code}}">{{name}}</option>
+  {{/each}}
+</select>
+
+
+<div id="table-location"></div>
+
+</div>
+
+<!-- <script id="tabular-template" type="text/x-handlebars-template">
+
+    {{#each this}}
+      <p>{{title}}</p>
+    {{/each}}
+
+<p>ewer</p>
+</div>
+</script> -->
