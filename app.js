@@ -16,6 +16,10 @@ var countries = require('./data/countries')
 var db = mongoose.connection;
 mongoose.connect('mongodb://localhost:27017/countryranking');
 
+var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/countryranking'
+
+mongoose.connect(mongoUri);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -59,6 +63,8 @@ app.use(function(req, res, next) {
 });
 
 app.set('port', process.env.PORT || 3000);
+
+app.listen(process.env.PORT || 3000)
 
 var server = app.listen(app.get('port'), function() {
     console.log('Express server listening on port ' + server.address().port);
