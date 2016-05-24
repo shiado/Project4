@@ -12,15 +12,19 @@ var express = require('express'),
   }
 
 router.get('/api/:category', (req, res) => {
+  //searches for the categories in my drop down list 
   const category = categories.find(function (category) {
     return category.code === req.params.category.toUpperCase()
   })
   if (category) {
     Android.find().exec(function (err, countries) {
       if (err) throw err
+      //count no of app in each country
       const results = countries.map(function (country) {
         const obj = {}
+        //total app count for each country
         obj.totalAppCount = country.content.length
+        //filter for parameters
         obj.content = country.content.filter(function (app) {
           return category.code === app.genres[0]
         })
